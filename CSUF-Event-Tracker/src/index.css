@@ -11,6 +11,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  margin: 0px;
+  padding: 0px;
+  position: relative;
 }
 
 a {
@@ -22,12 +26,10 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+html, body {
+  padding: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
 }
 
 h1 {
@@ -53,6 +55,46 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+#navbar{
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 30px;
+  gap: 30px;
+  background-color: white;
+  border: 1px solid gainsboro;
+  color: #00244E;
+}
+
+#navlinks nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  gap: 30px;
+}
+
+#navlinks nav a {
+  padding: 20px;
+  border-radius: 5%;
+  color:#00244E !important;
+
+}
+
+@keyframes hovernavlink {
+  from {background-color: transparent}
+  to {background-color: #FF7900}
+}
+
+#navlinks nav a:hover {
+  animation-name: hovernavlink;
+  animation-duration: 0.5s;
+  background-color: #FF7900;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
