@@ -1,73 +1,106 @@
-# React + TypeScript + Vite
+# CSUF Event Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for discovering and tracking events at California State University Fullerton. Built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+### Event Finder
+- 🔍 **Smart Search** - Search events by title, description, location, organizer, or tags
+- 🏷️ **Tag Filtering** - Filter events by categories like tech, career, arts, wellness, and more
+- 🔖 **Save Events** - Bookmark events to add them to your personal dashboard
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Event Dashboard
+- 📅 View all your saved events in one place
+- 📱 Responsive design works on desktop, tablet, and mobile
+- 🌓 Automatic dark/light mode based on system preferences
 
-## React Compiler
+## Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/GaballaGit/CSUF-Event-Tracker.git
+   cd CSUF-Event-Tracker/
+   ```
 
-## Expanding the ESLint configuration
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+4. **Open your browser**
+   - Navigate to `http://localhost:5173`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Usage
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Finding Events
+1. Navigate to the **Finder** page
+2. Use the search bar to find specific events
+3. Click tag filters to narrow down results
+4. Click the bookmark icon on any event to save it to your dashboard
+
+### Managing Your Events
+1. Navigate to the **Dashboard** page
+2. View all your saved events
+3. Click the bookmark icon again to remove events from your dashboard
+
+## Event Data Structure
+
+Events are stored in `src/events/events.json` with the following structure:
+
+```json
+{
+  "id": 1,
+  "title": "Event Title",
+  "description": "Event description",
+  "date": "2024-12-10",
+  "time": "14:00",
+  "duration": "2 hours",
+  "location": "Building Name, Room Number",
+  "organizer": "Organization Name",
+  "tags": ["tag1", "tag2", "tag3"],
+  "image": "/assets/image-name.jpg"
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Technologies Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Build tool and dev server
+- **CSS3** - Styling with custom properties
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Design Features
+
+- Custom color scheme matching CSUF branding
+- Smooth animations and transitions
+- Responsive grid layouts
+- Accessible form controls
+
+## Development
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+### Adding New Events
+
+1. Open `src/events/events.json`
+2. Add a new event object following the structure above
+3. Add the corresponding image to `public/assets/`
+4. The event will automatically appear in the Finder
+
+## Contributing
+
+This is a student project for California State University Fullerton. If you'd like to contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
