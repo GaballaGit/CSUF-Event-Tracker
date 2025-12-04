@@ -9,7 +9,7 @@
       "location": "Engineering Building, Room 205",
       "organizer": "Computer Science Club",
       "tags": ["tech", "AI", "programming"],
-      "image": "/assets/ml-workshop.jpg"
+      "image": "assets/ml-workshop.jpg"
     },
     {
       "id": 2,
