@@ -99,7 +99,7 @@ button:focus-visible {
 	margin-top: 90px;
 }
 
-<--For users that prefer light mode-->
+/* For users that prefer light mode*/
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

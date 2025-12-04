@@ -1,0 +1,37 @@
+#dashheader {
+    margin-left: 20px;
+}
+
+#eventdash {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#defshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00244E;
+}
+
+#dropdown.open {
+    height: 164px;
+    transition: height 0.25s ease;
+    overflow: hidden;
+}
+
+#dropdown.close {
+    overflow: hidden;
+    height: 0px;
+    transition: height 0.25s ease;
+}
+
+#dropdowntop {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
