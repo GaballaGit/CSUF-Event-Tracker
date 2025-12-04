@@ -1,5 +1,5 @@
 
-type Event = {
+export interface Event {
 	id: number;
 	name: string;
 	host: string;
