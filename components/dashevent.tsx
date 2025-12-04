@@ -30,7 +30,7 @@ export default function DashboardEvent({ event }: { event: Event }) {
 						<img src={event.image} />
 					</div>
 				</div>
-						<div id="dropdown" className={tdd ? "close" : "open"}>
+						<div id="dropdown" className={tdd ? "open" : "close"}>
 							<div id="dropdowntop">
 								<h3>Host: {event.host}</h3>
 								<h3>Location: {event.location}</h3>

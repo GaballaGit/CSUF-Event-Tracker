@@ -15,19 +15,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #00244E;
+    border: 3px solid #00244E;
+    border-radius: 5px;
 }
 
 #dropdown.open {
     height: 164px;
     transition: height 0.25s ease;
     overflow: hidden;
+    border: 1px solid #FF7900;
+    border-radius: 5px;
+    margin-bottom: 50px;
 }
 
 #dropdown.close {
     overflow: hidden;
     height: 0px;
-    transition: height 0.25s ease;
+    transition: height 0.2s ease;
+    margin-bottom: 50px;
+    /* border: 1px solid #FF7900; */
+    border-top: 0px solid #FF7900;
+    border-bottom: 1px solid #FF7900;
+    border-right: 1px solid #FF7900;
+    border-left: 1px solid #FF7900;
 }
 
 #dropdowntop {
