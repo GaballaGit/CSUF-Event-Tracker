@@ -58,7 +58,7 @@ button:focus-visible {
 
 #navbar{
   width: 100%;
-  position: absolute;
+  position: sticky;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -95,6 +95,9 @@ button:focus-visible {
   background-color: #FF7900;
 }
 
+#spacer {
+	margin-top: 90px;
+}
 
 <--For users that prefer light mode-->
 @media (prefers-color-scheme: light) {

@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Navbar from '../components/navbar'
 import Dashboard from './pages/dashboard//dashboard'
 import Finder from './pages/finder/finder'
+import Spacing from '../components/spacing'
 
 function App() {
 	const [count, setCount] = useState(0)
