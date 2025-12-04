@@ -2,10 +2,15 @@ import events from '../../events/events.json';
 import { useState } from 'react';
 import './finder.css';
 
-export default function Finder() {
+// To recieve events from app.tsx
+interface FinderProps {
+    savedEvents: number[];
+    setSavedEvents: (events: number[]) => void;
+}
+
+export default function Finder({ savedEvents, setSavedEvents }: FinderProps) {
     const eventList = events;
     const [selectedTag, setSelectedTag] = useState('All');
-    const [savedEvents, setSavedEvents] = useState<number[]>([]);
     const [searchQuery, setSearchQuery] = useState('');
 
     // Get unique tags
