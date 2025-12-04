@@ -1,12 +1,11 @@
 import events from '../../events/events.json';
 import { useState } from 'react';
-import type { Event } from '../../../types/types'
 import './finder.css';
 
-// To recieve events from app.tsx
+// To recieve events ids from app.tsx
 interface FinderProps {
-	savedEvents: Event[];
-	setSavedEvents: (events: Event[]) => void;
+	savedEvents: number[];
+	setSavedEvents: (events: number[]) => void;
 }
 
 export default function Finder({ savedEvents, setSavedEvents }: FinderProps) {

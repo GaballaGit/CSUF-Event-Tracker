@@ -6,7 +6,8 @@ import Dashboard from './pages/dashboard/dashboard'
 import Finder from './pages/finder/finder'
 
 function App() {
-	const [savedEvents, setSavedEvents] = useState<Event[]>([]);
+	// Event IDs
+	const [savedEvents, setSavedEvents] = useState<number[]>([]);
 
 	return (
 		<>

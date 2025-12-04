@@ -1,10 +1,11 @@
 
 export interface Event {
 	id: number;
-	name: string;
-	host: string;
-	time: number;
+	title: string;
+	date: string;
+	time: string;
 	description: string;
+	duration: string;
 	location: string;
 	tags: string[];
 	organizer: string;

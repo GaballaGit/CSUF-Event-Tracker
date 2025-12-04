@@ -1,14 +1,31 @@
 import type { Event } from '../types/types.ts'
 import { useState, useEffect } from 'react'
 
+function formatTime(ms: number) {
+  if (ms <= 0) return "Started"
+
+  const totalSec = Math.floor(ms / 1000);
+  const days = Math.floor(totalSec / (3600 * 24));
+  const hrs = Math.floor((totalSec % (3600 * 24)) / 3600);
+  const mins = Math.floor((totalSec % 3600) / 60);
+  const secs = totalSec % 60;
+
+  if (days > 0) {
+    return `${days}d ${hrs}h ${mins}m ${secs}s`;
+  }
+
+  return `${hrs}h ${mins}m ${secs}s`
+}
+
 export default function DashboardEvent({ event }: { event: Event }) {
 	const [time, updateTime] = useState(0)
 	const [tdd, toggleDropDown] = useState(false)
 
 	useEffect(() => {
+		const eventTimestamp = new Date(`${event.date}T${event.time}`).getTime();
 		const id = setInterval(() => {
 			const curTime = new Date().valueOf();
-			updateTime(event.time - curTime)
+			updateTime(eventTimestamp - curTime)
 		}, 1000);
 		return () => clearInterval(id);
 	}, [])
@@ -22,8 +39,8 @@ export default function DashboardEvent({ event }: { event: Event }) {
 			<div id="eventdash">
 				<div id="defshow">
 					<div id="edtext">
-						<h1>{event.name}</h1>
-						<h2>Starts in: {time}</h2>
+						<h1>{event.title}</h1>
+						<h2>Starts in: {formatTime(time)}</h2>
 						<button id="dropbutton" onClick={toggleDD}>&#62;</button>
 					</div>
 					<div id="edpic">
@@ -32,7 +49,7 @@ export default function DashboardEvent({ event }: { event: Event }) {
 				</div>
 						<div id="dropdown" className={tdd ? "open" : "close"}>
 							<div id="dropdowntop">
-								<h3>Host: {event.host}</h3>
+								<h3>Host: {event.organizer}</h3>
 								<h3>Location: {event.location}</h3>
 							</div>
 							<div id="dropdownbottom">
