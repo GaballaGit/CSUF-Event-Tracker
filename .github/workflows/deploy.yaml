@@ -25,7 +25,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ https://gaballagit.github.io/CSUF-Event-Tracker/ }}
+      url: https://gaballagit.github.io/CSUF-Event-Tracker/ 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
