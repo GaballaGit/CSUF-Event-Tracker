@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import events from '../../events/events.json';
-import type { Event } from '../../../types/types';
 import DashboardEvent from '../../../components/dashevent';
 import './dashboard.css';
 
@@ -23,7 +22,7 @@ export default function Dashboard({ savedEvents, setSavedEvents }: DashboardProp
   const tags = ['All', ...new Set(allTags)];
 
   // Filter events by tag
-  let filteredEvents = filterTag === 'All' 
+  const filteredEvents = filterTag === 'All' 
     ? savedEventObjects 
     : savedEventObjects.filter(event => event.tags.includes(filterTag));
 

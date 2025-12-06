@@ -41,7 +41,12 @@ export default function DashboardEvent({ event }: { event: Event }) {
 					<div id="edtext">
 						<h1>{event.title}</h1>
 						<h2>Starts in: {formatTime(time)}</h2>
-						<button id="dropbutton" onClick={toggleDD}>&#62;</button>
+						{tdd ? (
+							<button id="dropbutton" onClick={toggleDD}>v</button>
+						) : (
+							<button id="dropbutton" onClick={toggleDD}>&#62;</button>
+						)
+					}
 					</div>
 					<div id="edpic">
 						<img src={event.image} />

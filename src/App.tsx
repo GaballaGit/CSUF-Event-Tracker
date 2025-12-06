@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
 import { useState } from 'react'
-import type { Event } from '../types/types'
 import Navbar from '../components/navbar'
 import Dashboard from './pages/dashboard/dashboard'
 import Finder from './pages/finder/finder'
