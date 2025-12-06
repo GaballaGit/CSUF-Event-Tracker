@@ -9,7 +9,7 @@
       "location": "Engineering Building, Room 205",
       "organizer": "Computer Science Club",
       "tags": ["tech", "AI", "programming"],
-      "image": "assets/ml-workshop.jpg"
+      "image": "/CSUF-Event-Tracker/assets/ml-workshop.jpg"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "location": "Student Union Main Hall",
       "organizer": "Career Services",
       "tags": ["career", "networking", "jobs"],
-      "image": "/assets/career-fair.jpg"
+      "image": "/CSUF-Event-Tracker/assets/career-fair.jpg"
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "location": "Arts Center Theater",
       "organizer": "Film Society",
       "tags": ["arts", "entertainment", "student-work"],
-      "image": "/assets/film-festival.jpg"
+      "image": "/CSUF-Event-Tracker/assets/film-festival.jpg"
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "location": "Business School Auditorium",
       "organizer": "Entrepreneurship Club",
       "tags": ["business", "startups", "competition"],
-      "image": "/assets/startup-pitch.jpg"
+      "image": "/CSUF-Event-Tracker/assets/startup-pitch.jpg"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "location": "Recreation Center Studio B",
       "organizer": "Student Wellness Center",
       "tags": ["wellness", "fitness", "mental-health"],
-      "image": "/assets/yoga-session.jpg"
+      "image": "/CSUF-Event-Tracker/assets/yoga-session.jpg"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "location": "Campus Green",
       "organizer": "International Students Association",
       "tags": ["food", "culture", "diversity"],
-      "image": "/assets/food-festival.jpg"
+      "image": "/CSUF-Event-Tracker/assets/food-festival.jpg"
     },
     {
       "id": 7,
@@ -81,7 +81,7 @@
       "location": "Science Building Atrium",
       "organizer": "Office of Research",
       "tags": ["research", "academic", "science"],
-      "image": "/assets/research-symposium.jpg"
+      "image": "/CSUF-Event-Tracker/assets/research-symposium.jpg"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
       "location": "Computer Science Building",
       "organizer": "ACM Student Chapter",
       "tags": ["tech", "programming", "competition", "networking"],
-      "image": "/assets/hackathon.jpg"
+      "image": "/CSUF-Event-Tracker/assets/hackathon.jpg"
     },
     {
       "id": 9,
@@ -105,7 +105,7 @@
       "location": "Campus Coffee House",
       "organizer": "Creative Writing Club",
       "tags": ["arts", "literature", "performance"],
-      "image": "/assets/poetry-night.jpg"
+      "image": "/CSUF-Event-Tracker/assets/poetry-night.jpg"
     },
     {
       "id": 10,
@@ -117,6 +117,6 @@
       "location": "Alumni Center",
       "organizer": "Alumni Relations",
       "tags": ["networking", "career", "alumni"],
-      "image": "/assets/alumni-mixer.jpg"
+      "image": "/CSUF-Event-Tracker/assets/alumni-mixer.jpg"
     }
 ]

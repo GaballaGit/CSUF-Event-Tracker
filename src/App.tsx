@@ -13,7 +13,7 @@ function App() {
 			<Navbar />
 			<Routes>
 				<Route
-					path="/"
+					path="/CSUF-Event-Tracker"
 					element={
 						<Dashboard
 							savedEvents={savedEvents}
@@ -22,7 +22,7 @@ function App() {
 					}
 				/>
 				<Route
-					path="/find"
+					path="/CSUF-Event-Tracker/find"
 					element={
 						<Finder
 							savedEvents={savedEvents}
